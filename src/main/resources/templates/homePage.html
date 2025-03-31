@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+
+    <link rel="stylesheet" href="styles/style.css/">
+    <script src="/scripts/script.js" defer></script>
+</head>
+<body>
+<main>
+    <section class="form_section">
+        <section class="container_image-form">
+            <div class="container_image-text">
+                <div class="left-text">
+                    <h1>Realize seu cadastro!</h1>
+                    <p>Preencha todos os dados corretamente, realize com calma.</p>
+                </div>
+
+                <img
+                        class="left-image"
+                        src="img/image_background.png"
+                        alt="Homem sentado com tablet"
+                />
+            </div>
+
+            <div class="container_form-home">
+                <div class="form_client">
+                    <form id="form-client" action="/contacts" method="get">
+                        <h2>Cadastro de Cliente</h2>
+
+                        <div class="form_client--data">
+                            <label for="name">*Nome:</label>
+                            <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    placeholder="Nome Completo *Obrigatório"
+                            />
+                            <label for="cpf">*CPF: </label>
+                            <input
+                                    type="text"
+                                    name="cpf"
+                                    id="cpf"
+                                    placeholder="Apenas Números *Obrigatório"
+                                    maxlength="11"
+                            />
+
+                            <label for="dateBirth">Data de nascimento: </label>
+                            <input type="date" name="dateBirth" id="dateBirth" />
+
+                        <label for="address">Endereço</label>
+                                <input
+                                        type="text"
+                                        name="address"
+                                        id="address"
+                                        placeholder="Rua João da Silva, Jardim Sul, 205"
+                                />
+                    </div>
+                        <button type="submit" class="button-submit_form">
+                            Mostrar Contatos
+                        </button>
+                    </form>
+                </div>
+
+                <div class="options">
+                    <div class="options-crud">
+                        <a href="">Editar Dados</a>
+                        <a href="">Excluir </a>
+                        <a href="">Listar </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+</body>
+</html>

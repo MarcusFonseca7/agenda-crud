@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Contatos</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="/scripts/script.js" defer></script>
+</head>
+<body>
+<main>
+    <section class="form_section">
+        <section class="container_image-form">
+            <div class="container_image-text">
+                <div class="left-text">
+                    <h1>Olá <span th:text="${clientName}"></span>!</h1>
+                    <p>Preencha os dados do contato para cadastrá-lo.</p>
+                </div>
+
+                <img
+                        class="left-image"
+                        src="img/image_background.png"
+                        alt="Homem sentado com tablet"
+                />
+            </div>
+
+            <div class="container_form-contacts">
+
+                <h2>Contato</h2>
+
+                <table class="table-contacts">
+                    <tr>
+                        <th>Tipo do Contato</th>
+                        <th>Valor</th>
+                        <th>Observação</th>
+                        <th colspan="2">Opções</th>
+                    </tr>
+
+                    <th:block th:each="contact : ${clientContacts}">
+
+                    <tr>
+                        <td th:text="${contact.typeContact}"></td>
+                        <td th:text="${contact.valueContact}"></td>
+                        <td th:text="${contact.obs}"></td>
+                        <td> <button class="button-submit_form"> <a th:href="@{|/contacts/edit/${contact.valueContact}|}">Edit</a></button></td>
+                        <td> <button class="button-submit_form"> <a th:href="@{|/contacts/delete/${contact.valueContact}|}">Delete</a></button></td>
+                    </tr>
+
+                    </th:block>
+
+
+                </table>
+
+
+            <div class="options-contact">
+                <a href="/contacts/create">Adicionar Contatos</a>
+            </div>
+
+            </div>
+
+        </section>
+    </section>
+</main>
+</body>
+</html>

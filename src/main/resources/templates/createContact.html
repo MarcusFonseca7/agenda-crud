@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Contato</title>
+
+    <link rel="stylesheet" href="/styles/style.css/">
+    <script src="/scripts/script.js" defer></script>
+</head>
+<body>
+<main>
+    <section class="form_section">
+        <section class="container_image-form">
+            <div class="container_image-text">
+                <div class="left-text">
+                    <h1>Realize seu cadastro!</h1>
+                    <p>Preencha todos os dados corretamente, realize com calma.</p>
+                </div>
+
+                <img
+                        class="left-image"
+                        src="/img/image_background.png"
+                        alt="Homem sentado com tablet"
+                />
+            </div>
+
+            <div class="container_form-home">
+                <div class="form_client">
+                    <form id="form-create-edit" action="/contacts/createContact" method="get" th:object="${newContact}">
+                            <h2>Cadastro de Contato</h2>
+                        <div class="form_contact">
+
+                            <div class="form_contact--data">
+                                <div>
+                                    <label for="typeContact"> Tipo de contato</label>
+                                    <input
+                                            type="text"
+                                            name="typeContact"
+                                            id="typeContact"
+                                            placeholder="Email ou Telefone"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label for="valueContact">Contato</label>
+                                    <input
+                                            type="text"
+                                            name="valueContact"
+                                            id="valueContact"
+                                            placeholder="aaa@gmail.com ou 11930072732"
+                                    />
+                                </div>
+
+                                <div>
+                                    <label for="obs">Observação: </label>
+                                    <input type="text" name="obs" id="obs" placeholder="Mãe/Pai" />
+                                </div>
+
+                                <button type="submit" class="button-submit_form">Cadastrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+</body>
+</html>
