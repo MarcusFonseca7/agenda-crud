@@ -14,7 +14,7 @@ Front-end: HTML, CSS, JavaScript
 4. Execute o servidor "mvn spring-boot:run"
   
 🎯 Uso
-Acesse "http://localhost:8080" no navegador.
-Insira os dados de cliente
-Adicione, edite e exclua contatos conforme queira.
+1. Acesse "http://localhost:8080" no navegador.
+2. Insira os dados de cliente
+3. Adicione, edite e exclua contatos conforme queira.
 
