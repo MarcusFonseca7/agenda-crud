@@ -8,13 +8,13 @@ Back-end: Java (Spring Boot, Thymeleaf)
 Front-end: HTML, CSS, JavaScript
 
 🛠️ Instalação
-1. Clone o repositório git clone https://github.com/MarcusFonseca7/agenda-crud.git
-2. Entre na pasta do projeto cd agenda-crud
+1. Clone o repositório "git clone https://github.com/MarcusFonseca7/agenda-crud.git"
+2. Entre na pasta do projeto "cd agenda-crud"
 3. Instale as dependências "mvn install"
-4. Execute o servidor mvn spring-boot:run
+4. Execute o servidor "mvn spring-boot:run"
   
 🎯 Uso
-Acesse http://localhost:8080 no navegador.
+Acesse "http://localhost:8080" no navegador.
 Insira os dados de cliente
 Adicione, edite e exclua contatos conforme queira.
 
