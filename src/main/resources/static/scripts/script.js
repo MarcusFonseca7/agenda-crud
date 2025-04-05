@@ -26,7 +26,7 @@ form.addEventListener("submit", (event) => {
 
   if (
     cpfInput.value === "" ||
-    !isCpfValid(cpfInput.value) ||
+    isCpfValid(cpfInput.value) ||
     cpfInput.value.length != 11
   ) {
     alert("Por favor digite seu CPF.");
@@ -53,13 +53,13 @@ function isNameValid(name) {
 }
 
 function isCpfValid(cpf) {
-  const cpfRegex = new RegExp(/[0-9]{11}/); //validação para não existir letras no cpf
+  const cpfRegex = new RegExp("[0-9]{11}"); //validação para não existir letras no cpf
 
   if (cpfRegex.test(cpf)) {
-    return true; //se existir, retorna falso, e então o alerta é ativado
+    return false; //se existir, retorna falso, e então o alerta é ativado
   }
 
-  return false; //se não existir, retorna true e o nome é válido
+  return true; //se não existir, retorna true e o cpf é válido
 }
 
 function isDateBirthValid(dateBirth) {
